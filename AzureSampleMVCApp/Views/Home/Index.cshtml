@@ -11,12 +11,13 @@
 <div class="row">
     <div class="col-md-4">
         <h2>App Settings and Connection Strings</h2>
-        This is app setting Day Of Week <b>dayOfWeek</b>
-        @Environment.GetEnvironmentVariable("APPSETTING_dayOfWeek");
+        <p>This is app setting Day Of Week <b>dayOfWeek</b></p>
+        @Environment.GetEnvironmentVariable("APPSETTING_dayOfWeek")
     </div>
     <div class="col-md-4">
-        <h2>Get more libraries</h2>
-
+        <h2>Configuration Manager Example</h2>
+        <p>This is from Configuration Manager<br/>
+        <b>@System.Configuration.ConfigurationManager.AppSettings["favoriteColor"]</b></p>
     </div>
     <div class="col-md-4">
         <h2>Web Hosting</h2>
