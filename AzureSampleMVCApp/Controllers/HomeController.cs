@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Diagnostics;
 
 namespace AzureSampleMVCApp.Controllers
 {
@@ -10,13 +11,15 @@ namespace AzureSampleMVCApp.Controllers
     {
         public ActionResult Index()
         {
+            Trace.WriteLine("**INFO**The home page has been loaded.");
+            Trace.TraceInformation("**INFO**The home page was loaded at: " + DateTime.Now.ToString());
             return View();
         }
 
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
-
+            Trace.TraceError("**ERROR**About page error: " + DateTime.Now.ToString());
             return View();
         }
 
